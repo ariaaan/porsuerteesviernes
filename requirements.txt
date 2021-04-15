@@ -1,0 +1,4 @@
+tweepy==3.10.0
+python-dotenv==0.17.0
+emoji==1.2.0
+loguru==0.5.3
