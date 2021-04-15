@@ -4,6 +4,10 @@ from loguru import logger
 from twitter import twitter_auth, generate_tweet
 
 
+def lambda_handler(event=None, context=None):
+    friday_tweet()
+
+
 def friday_tweet():
     # Get twitter API
     twitter_api = twitter_auth()
