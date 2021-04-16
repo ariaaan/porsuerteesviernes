@@ -9,7 +9,7 @@ VIDEO_URL = "https://www.youtube.com/watch?v=WZC5VsqKqH8&t=77s"
 
 
 def generate_tweet():
-    return f"Pero por suerte es viernes {emojis.get_random_friday_emoji()}!\n\n{VIDEO_URL}"
+    return f"Pero por suerte es viernes {emojis.get_random_friday_emoji()}! @zambayonny\n\n{VIDEO_URL}"
 
 
 def twitter_auth():
