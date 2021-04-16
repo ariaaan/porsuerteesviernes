@@ -9,7 +9,7 @@ jobs:
     name: deploy to aws lambda
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@
+      - uses: actions/checkout@v2
 
       - name: zip
         uses: montudor/action-zip@v0.1.0
