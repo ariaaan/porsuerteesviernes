@@ -11,11 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: zip
-        uses: montudor/action-zip@v0.1.0
+      - name: zip source code
+        uses: papeloto/action-zip@v1
         with:
-          args: zip -r viernes.zip ./porsuerteesviernes/viernes/*.py
-  
+          files: viernes/*.py
+          dest: ./viernes.zip
+
       - name: default deploy
         uses: appleboy/lambda-action@master
         with:
@@ -23,4 +24,4 @@ jobs:
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: us-east-1
           function_name: por-suerte-es-viernes
-          zip_file: ./porsuerteesviernes/viernes.zip
+          zip_file: ./viernes.zip
