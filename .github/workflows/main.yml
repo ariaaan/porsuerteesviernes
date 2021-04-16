@@ -14,7 +14,7 @@ jobs:
       - name: zip
         uses: montudor/action-zip@v0.1.0
         with:
-          args: zip -r viernes.zip ./viernes/*.py
+          args: zip -r viernes.zip ./porsuerteesviernes/viernes/*.py
   
       - name: default deploy
         uses: appleboy/lambda-action@master
@@ -23,4 +23,4 @@ jobs:
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: us-east-1
           function_name: por-suerte-es-viernes
-          zip_file: ./viernes.zip
+          zip_file: ./porsuerteesviernes/viernes.zip
