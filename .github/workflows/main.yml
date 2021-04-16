@@ -14,10 +14,10 @@ jobs:
       - name: zip source code
         uses: papeloto/action-zip@v1
         with:
-          files: viernes/*.py
+          files: viernes/app.py viernes/emojis.py viernes/twitter.py viernes/settings.py
           dest: ./viernes.zip
 
-      - name: default deploy
+      - name: deploy to lambda
         uses: appleboy/lambda-action@master
         with:
           aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
